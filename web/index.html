@@ -1,0 +1,79 @@
+<!--
+Copyright (c) 2020 LG Electronics Inc.
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>How to Nature</title>
+  <link href="theme.css" rel="stylesheet" />
+  <script type="text/javascript">
+    window.onload = function () {
+      var date = new Date();
+      var day = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'];
+      switch (date.getDay()) {
+        case 0:
+          document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste. (8:00 PM - 2:00 AM)';
+          break;
+        case 1:
+          document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste, recyclables, and food waste. (8:00 PM - 2:00 AM)';
+          break;
+        case 2:
+          document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste. (8:00 PM - 2:00 AM)';
+          break;
+        case 3:
+          document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste, recyclables, and food waste. (8:00 PM - 2:00 AM)';
+          break;
+        case 4:
+          document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste. (8:00 PM - 2:00 AM)';
+          break;
+        case 5:
+          document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste, recyclables, and food waste. (8:00 PM - 2:00 AM)';
+          break;
+        case 6:
+          document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is not the day to discharge waste!';
+          break;
+        default:
+          document.getElementById("navbarSupportedContent").innerHTML = '';
+      }
+
+
+      var bridge = new WebOSServiceBridge();
+    }
+  </script>
+</head>
+
+<body>
+  <main class="main" id="top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container"><a class="navbar-brand" href="#"><img src="img/icons/logo.png" alt="" width="30" /><span
+            class="text-1000 fs-1 ms-2 fw-medium">HowTo<span class="fw-bold">Nature</span></span></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </div>
+      </div>
+    </nav>
+
+    <section class="pb-6" style="overflow:scroll; height:1000px">
+      <div class="container">
+        <div class="row flex-center">
+          <div class="col-lg-6 col-md-5 order-md-1"><img class="img-fluid" src="img/illustrations/1.png" alt="" /></div>
+          <div class="col-md-7 col-lg-6 mt-5 text-center text-md-start">
+            <h1 class="fw-medium">Want everyone to be able <br />to seperate trash easily.</h1>
+            <p class="mt-3 mb-4"> This web 'How To Nature' guides the correct segregated collection method and provides
+              segregated emission day notifications. By guiding accurate segregated collection methods in real time,
+              we can enhance the effectiveness of segregated collection and providing segregated emission day
+              notifications,
+              we can help segregated collection efficiently. </p>
+            <a class="btn btn-lg btn-danger hover-top btn-glow" href="classification.html">Get Started </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>
