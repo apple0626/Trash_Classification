@@ -22,7 +22,7 @@ def button_click(low, high):
 
         def callback():
 
-            cv2.imwrite('self camera test.jpg', frame)
+            cv2.imwrite('C:/Users/test/Desktop/Untitled Folder/sample_test/self camera test.jpg', frame)
             c1["text"]='clicked'
             
         #checkvar1=IntVar()
