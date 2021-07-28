@@ -34,6 +34,25 @@
                     document.getElementById("navbarSupportedContent").innerHTML = '';
             }
 
+
+            var bridge = new WebOSServiceBridge();
+
+            var url = 'luna://com.domain.app.service/readFile';
+            var params = '{"path":"result.txt"}';
+
+            function callback(msg) {
+                var arg = JSON.parse(msg);
+                if (arg.returnValue) {
+                    var h1 = document.createElement("h1");
+                    var node = document.createTextNode(arg.fileData);
+                    h1.appendChild(node);
+                    document.getElementById("result_txt").appendChild(h1);
+                }
+            }
+
+            bridge.onservicecallback = callback;
+            bridge.call(url, params);
+
         }
     </script>
 </head>
@@ -51,7 +70,7 @@
 
         <section class="pb-6" style="overflow:scroll; height:1000px">
             <div class="container">
-                Result
+                <div id="result_txt"></div>
             </div>
         </section>
     </main>
