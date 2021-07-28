@@ -10,16 +10,14 @@ cap.set(3,640)
 cap.set(4,480)
 
 
-
 def button_click(low, high):
     
     for i in range(low, high):
         window=Tk()
 
         def callback():
-
             cv2.imwrite('C:/Users/test/Desktop/Untitled Folder/sample_test/self camera test.jpg', frame)
-            cv2.imwrite('C:/Users/test/Documents/GitHub/Trash_Classification/web/htnservice/test.jpg', frame)
+            cv2.imwrite('htnservice/result/test.jpg', frame)
             c1["text"]='clicked'
             
         #checkvar1=IntVar()
@@ -38,9 +36,6 @@ while(True):
     ret, frame = cap.read()
     # Display the resulting frame
     cv2.imshow('frame', frame)
-    
-
-
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

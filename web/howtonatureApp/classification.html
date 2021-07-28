@@ -37,15 +37,15 @@
 
             var bridge = new WebOSServiceBridge();
 
-            var url = 'luna://com.domain2.app.service/readFile';
+            var url = 'luna://com.domain.app.service/readFile';
             var params = '{"path":"result.txt"}';
-            var result;
+
             function callback(msg) {
                 var arg = JSON.parse(msg);
                 if (arg.returnValue) {
                     document.getElementById("result_txt").innerHTML=arg.fileData;
                 }
-                result=arg.fileData;
+                var result=arg.fileData;
                 if(result=="trash"){
                     document.getElementById("result_img").innerHTML="trash";
                 }
@@ -63,69 +63,25 @@
                 }
             }
 
-
-
             document.getElementById('resultBtn').onclick = function () {
                 bridge.onservicecallback = callback;
                 bridge.call(url, params);
-                document.getElementById("imgID").src="icon.png";
             };
 
-            
+            var readImgurl = 'luna://com.domain.app.service/readImgFile';
+            var readImgparams = '{"path":"test.jpg"}';
 
-
-      /*      var url = 'luna://com.webos.media/load';
-            var params = '{"uri":"file:///home/root/test.jpg"\,
-                        "type":"media"\,
-                        "payload":\{
-                        "option":\{
-                              "appId":"com.webos.app.enactbrowser"\,
-                              "windowId":"_Window_Id_2\"
-                           \}
-                        \}
-                     }';
-            var mediaId;
-
-            function callback(msg) {
+            function readImgcallback(msg) {
                 var arg = JSON.parse(msg);
                 if (arg.returnValue) {
-                    mediaId=arg.mediaId;
-                    document.getElementById("result_img").innerHTML=mediaId;
-                }
-                else{
-                    document.getElementById("result_img").innerHTML="no";
+                    document.getElementById("inputImg").src="data:image/png;base64,"+arg.fileData;
                 }
             }
 
-            document.getElementById('resultBtn').onclick = function () {
-                bridge.onservicecallback = callback;
-                bridge.call(url, params);
-
-
-                var url2 = 'luna://com.webos.media/play';
-                var params2 = '{"mediaID":"'+mediaId+'"}';
-                bridge.call(url2, params2)
-
-            }; */
-
-
-           /* var url2 = 'luna://com.domain2.app.service/readImage';
-            var params2 = '{"path":"test.jpg"}';
-
-            function img_callback(msg) {
-                var arg = JSON.parse(msg);
-                if (arg.returnValue) {
-                    document.getElementById("result_img").innerHTML=arg.fileData;
-                }
-            }
-
-            document.getElementById('resultBtn').onclick = function () {
-                bridge.onservicecallback = img_callback;
-                bridge.call(url2, params2);
-            }; */
-
-
-
+            document.getElementById('ImageBtn').onclick = function () {
+                bridge.onservicecallback = readImgcallback;
+                bridge.call(readImgurl, readImgparams);
+            };
         }
     </script>
 </head>
@@ -143,6 +99,8 @@
 
         <section class="pb-6" style="overflow:scroll; height:1000px">
             <div class="container">
+                <image id="inputImg" src="" width="300px" height="300px"></image>
+                <button id="ImageBtn" class="btn btn-lg btn-danger hover-top btn-glow">Image</button>
                 <div id="result_txt"></div>
                 <div id="result_img"></div>
                 <button id="resultBtn" class="btn btn-lg btn-danger hover-top btn-glow">Result</button>
