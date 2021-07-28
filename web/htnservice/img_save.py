@@ -11,10 +11,6 @@ cap.set(4,480)
 
 
 
-
-
-
-
 def button_click(low, high):
     
     for i in range(low, high):
@@ -23,6 +19,7 @@ def button_click(low, high):
         def callback():
 
             cv2.imwrite('C:/Users/test/Desktop/Untitled Folder/sample_test/self camera test.jpg', frame)
+            cv2.imwrite('C:/Users/test/Documents/GitHub/Trash_Classification/web/htnservice/test.jpg', frame)
             c1["text"]='clicked'
             
         #checkvar1=IntVar()
