@@ -656,7 +656,7 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
-  margin-left: 80px;
+  margin-left: 10px;
 }
 
 .img-thumbnail {
