@@ -4939,8 +4939,11 @@ fieldset:disabled .btn {
   flex-grow: 1;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  padding-left: 50px;
+}
+
+#navbarSupportedContent {
+  margin-left: 70px;
+  margin-top: 10px;
   font-size: 1.2rem;
 }
 
@@ -18249,6 +18252,7 @@ label {
     font-size: 16px;
     border: none;
     background-color: white;
+    margin-top: 10px;
   }
   
   .dropdown {
