@@ -144,6 +144,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 20px;
 }
 
 abbr[title],
@@ -8503,7 +8504,8 @@ fieldset:disabled .btn {
 }
 
 .mt-3 {
-  margin-top: 1rem !important;
+  margin-top: 2rem !important;
+  margin-right: 50px;
 }
 
 .mt-4 {
@@ -8611,7 +8613,7 @@ fieldset:disabled .btn {
 }
 
 .mb-4 {
-  margin-bottom: 1.8rem !important;
+  margin-bottom: 3rem !important;
 }
 
 .mb-5 {
@@ -9457,7 +9459,8 @@ fieldset:disabled .btn {
 }
 
 .fw-medium {
-  font-weight: 500 !important;
+  font-weight: 800 !important;
+  font-size : 50px;
 }
 
 .fw-semi-bold {
