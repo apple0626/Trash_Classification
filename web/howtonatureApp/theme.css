@@ -414,14 +414,20 @@ button:not(:disabled),
 
 #resultDiv {
   display: inline-block;
-  width: 40%;
+  width: 45%;
   height: 525px;
   vertical-align: top;
-  margin-left: 50px;
+  margin-left: 3%;
 }
 
 #result_txt {
   font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#result_detail{ 
+  font-size: 25px;
+  margin-top: 50px;
 }
 
 textarea {
@@ -689,7 +695,16 @@ progress {
   padding-right: var(--bs-gutter-x, 1rem);
   padding-left: var(--bs-gutter-x, 1rem);
   margin-right: auto;
-  margin-left: 10%;
+  margin-left: auto;
+}
+
+
+.container2 {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 1rem);
+    padding-left: var(--bs-gutter-x, 1rem);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media (min-width: 576px) {

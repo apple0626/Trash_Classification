@@ -39,7 +39,7 @@
             var bridge = new WebOSServiceBridge();
             var bridge2 = new WebOSServiceBridge();
 
-            var url = 'luna://com.domain.app.service/readFile';
+            var url = 'luna://com.domain2.app.service/readFile';
             var params = '{"path":"result.txt"}';
 
             function callback(msg) {
@@ -49,19 +49,19 @@
                 }
                 var result=arg.fileData;
                 if(result=="trash"){
-                    document.getElementById("result_img").innerHTML="trash";
+                    document.getElementById("result_detail").innerHTML="- Drain using a standard plastic garbage bag<br/><br/>- Please discharge domestic industrial waste separately<br/><br/>- Attach stickers and discharge large waste after reporting";
                 }
                 else if(result=="glass"){
-                    document.getElementById("result_img").innerHTML="glass";
+                    document.getElementById("result_detail").innerHTML="- Remove the cap of the bottle and drain it<br/><br/>- Remove the debris and drain it<br/><br/>- If the glass bottle is broken, throw it in a standard plastic garbage bag";
                 }
                 else if(result=="plastic"){
-                    document.getElementById("result_img").innerHTML="plastic";
+                    document.getElementById("result_detail").innerHTML="- Remove any foreign substances and drain<br/><br/>- Remove any material other than the main body, such as attachment marks or accessories<br/><br/>- Separate transparent/coloured bottles<br/>";
                 }
                 else if(result=="metal"){
-                    document.getElementById("result_img").innerHTML="metal";
+                    document.getElementById("result_detail").innerHTML="- Remove the plastic lid and drain<br/><br/>- Empty contents, rinse with water and drain<br/><br/>- Squeeze the product and drain it";
                 }
                 else if(result=="paper"){
-                    document.getElementById("result_img").innerHTML="paper";
+                    document.getElementById("result_detail").innerHTML="- Be careful not to get wet<br/><br/>- Remove any other parts of the material and drain<br/><br/>- Remove the tape from the delivery box and drain it";
                 }
             }
 
@@ -76,7 +76,7 @@
                 bridge2.call(url, params);
             };
 
-            var readImgurl = 'luna://com.domain.app.service/readImgFile';
+            var readImgurl = 'luna://com.domain2.app.service/readImgFile';
             var readImgparams = '{"path":"test.jpg"}';
 
             function readImgcallback(msg) {
@@ -129,7 +129,7 @@
                     <div id="resultDiv">
                         <div id="result_txt"></div>
                         <p/>
-                        <div id="result_img"></div>
+                        <div id="result_detail"></div>
                     </div>
                 </div>
             </div>
