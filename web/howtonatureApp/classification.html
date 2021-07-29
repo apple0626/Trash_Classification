@@ -36,8 +36,9 @@
 
 
             var bridge = new WebOSServiceBridge();
+            var bridge2 = new WebOSServiceBridge();
 
-            var url = 'luna://com.domain.app.service/readFile';
+            var url = 'luna://com.domain2.app.service/readFile';
             var params = '{"path":"result.txt"}';
 
             function callback(msg) {
@@ -64,11 +65,14 @@
             }
 
             document.getElementById('resultBtn').onclick = function () {
-                bridge.onservicecallback = callback;
-                bridge.call(url, params);
+                bridge.onservicecallback = readImgcallback;
+                bridge.call(readImgurl, readImgparams);
+
+                bridge2.onservicecallback = callback;
+                bridge2.call(url, params);
             };
 
-            var readImgurl = 'luna://com.domain.app.service/readImgFile';
+            var readImgurl = 'luna://com.domain2.app.service/readImgFile';
             var readImgparams = '{"path":"test.jpg"}';
 
             function readImgcallback(msg) {
@@ -78,10 +82,6 @@
                 }
             }
 
-            document.getElementById('ImageBtn').onclick = function () {
-                bridge.onservicecallback = readImgcallback;
-                bridge.call(readImgurl, readImgparams);
-            };
         }
     </script>
 </head>
@@ -100,12 +100,10 @@
         <section class="pb-6" style="overflow:scroll; height:1000px">
             <div class="container">
                 <image id="inputImg" src="" width="300px" height="300px"></image>
-                <button id="ImageBtn" class="btn btn-lg btn-danger hover-top btn-glow">Image</button>
                 <div id="result_txt"></div>
                 <div id="result_img"></div>
                 <button id="resultBtn" class="btn btn-lg btn-danger hover-top btn-glow">Result</button>
             </div>
-            <img id="imgID" src="icon.png" width="100" height="100">
         </section>
     </main>
 </body>
