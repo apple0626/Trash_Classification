@@ -144,6 +144,9 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.home_intro {
   font-size: 20px;
 }
 
@@ -396,6 +399,15 @@ button:not(:disabled),
   padding-bottom: 10px;
 }
 
+#defaultImg {
+  display: block;
+  text-align: center;
+}
+
+#result_container {
+  display: none;
+}
+
 #inputImg {
   display: inline-block;
 }
@@ -403,7 +415,7 @@ button:not(:disabled),
 #resultDiv {
   display: inline-block;
   width: 40%;
-  height: 700px;
+  height: 525px;
   vertical-align: top;
   margin-left: 50px;
 }
@@ -9488,8 +9500,7 @@ fieldset:disabled .btn {
 }
 
 .fw-medium {
-  font-weight: 800 !important;
-  font-size : 50px;
+  font-weight: 500 !important;
 }
 
 .fw-semi-bold {
@@ -9502,6 +9513,7 @@ fieldset:disabled .btn {
 
 .fw-bolder {
   font-weight: 800 !important;
+  font-size : 50px;
 }
 
 .fw-black {

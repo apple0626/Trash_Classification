@@ -66,6 +66,9 @@
             }
 
             document.getElementById('resultBtn').onclick = function () {
+                document.getElementById("defaultImg").style.display = "none";
+                document.getElementById("result_container").style.display = "block";
+
                 bridge.onservicecallback = readImgcallback;
                 bridge.call(readImgurl, readImgparams);
 
@@ -118,11 +121,16 @@
                 <div>
                     <button id="resultBtn" class="btn btn-lg btn-danger">Result</button>
                 </div>
-                <image id="inputImg" src="img/default_img.png" width="50%" height="700px"></image>
-                <div id="resultDiv">
-                    <div id="result_txt"></div>
-                    <p/>
-                    <div id="result_img"></div>
+                <div id="defaultImg">
+                    <image src="img/default_img.png" width="50%" height="520px"></image>
+                </div>
+                <div id="result_container">
+                    <image id="inputImg" src="img/default_img.png" width="50%" height="520px"></image>
+                    <div id="resultDiv">
+                        <div id="result_txt"></div>
+                        <p/>
+                        <div id="result_img"></div>
+                    </div>
                 </div>
             </div>
         </section>
