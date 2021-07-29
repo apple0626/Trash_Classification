@@ -18168,4 +18168,21 @@ label {
 |   User Styles
 -----------------------------------------------*/
 
+.elementor-row{
+  width: 100%;
+}
+
+.elementor-image{
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.elementor-text{
+  width: 50%;
+  float: right;
+
+}
+
+
 /*# sourceMappingURL=theme.css.map */
