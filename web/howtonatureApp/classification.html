@@ -10,22 +10,22 @@
             var day = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'];
             switch (date.getDay()) {
                 case 0:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<strong>general waste</strong>. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 1:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<strong>general waste, recyclables, and food waste</strong>. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 2:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<strong>general waste</strong>. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 3:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<strong>general waste, recyclables, and food waste</strong>. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 4:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<strong>general waste</strong>. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 5:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<strong>general waste, recyclables, and food waste</strong>. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 6:
                     document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is not the day to discharge waste!';
@@ -38,7 +38,7 @@
             var bridge = new WebOSServiceBridge();
             var bridge2 = new WebOSServiceBridge();
 
-            var url = 'luna://com.domain.app.service/readFile';
+            var url = 'luna://com.domain2.app.service/readFile';
             var params = '{"path":"result.txt"}';
 
             function callback(msg) {
@@ -75,7 +75,7 @@
                 bridge2.call(url, params);
             };
 
-            var readImgurl = 'luna://com.domain.app.service/readImgFile';
+            var readImgurl = 'luna://com.domain2.app.service/readImgFile';
             var readImgparams = '{"path":"test.jpg"}';
 
             function readImgcallback(msg) {

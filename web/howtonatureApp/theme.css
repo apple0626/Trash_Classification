@@ -14,6 +14,20 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Overlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Comic+Neue:wght@400,700&family=Over+the+Rainbow&family=Overlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Capriola&family=Comic+Neue&family=Over+the+Rainbow&family=Overlock&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=DM+Sans&family=Open+Sans:wght@700&family=Overpass&display=swap');
+
+
 :root {
   --bs-blue: #387BF5;
   --bs-indigo: #727cf5;
@@ -84,11 +98,11 @@ hr:not([size]) {
   height: 1px;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+.h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Rubik", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   line-height: 1.2;
   color: #0B132A;
 }
@@ -146,8 +160,16 @@ p {
   margin-bottom: 1rem;
 }
 
+.elementor-text p {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .home_intro {
   font-size: 20px;
+  font-weight: 700;
+  font-family: 'Comic Neue', cursive;
 }
 
 abbr[title],
@@ -231,6 +253,7 @@ sup {
 a {
   color: #387BF5;
   text-decoration: none;
+  font-family: 'Comic Neue', cursive;
 }
 
 a:hover {
@@ -423,11 +446,19 @@ button:not(:disabled),
 #result_txt {
   font-size: 50px;
   margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: #0B132A;
 }
 
 #result_detail{ 
   font-size: 25px;
   margin-top: 50px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+}
+
+#font_one {
+  font-family: monospace;
 }
 
 textarea {
@@ -696,6 +727,7 @@ progress {
   padding-left: var(--bs-gutter-x, 1rem);
   margin-right: auto;
   margin-left: auto;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
 
@@ -3516,6 +3548,7 @@ textarea.form-control-lg {
 }
 
 .btn {
+  
   display: inline-block;
   font-weight: 500;
   line-height: 1.5;
@@ -3799,6 +3832,7 @@ fieldset:disabled .btn {
   border-color: #729B38;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-family: 'Comic Neue', cursive;
 }
 
 .btn-danger:hover {
@@ -9530,8 +9564,10 @@ fieldset:disabled .btn {
 }
 
 .fw-bolder {
-  font-weight: 800 !important;
+  font-weight:900 !important;
+  color: #0B132A;
   font-size : 50px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .fw-black {
@@ -17504,7 +17540,11 @@ label,
 .pagination,
 .valid-feedback,
 .invalid-feedback {
-  font-family: "Rubik", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Comic Neue', cursive;
+}
+
+.btn{
+  font-weight: 700;
 }
 
 pre {
