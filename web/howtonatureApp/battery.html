@@ -35,55 +35,6 @@
             }
 
 
-            var bridge = new WebOSServiceBridge();
-            var bridge2 = new WebOSServiceBridge();
-
-            var url = 'luna://com.domain2.app.service/readFile';
-            var params = '{"path":"result.txt"}';
-
-            function callback(msg) {
-                var arg = JSON.parse(msg);
-                if (arg.returnValue) {
-                    document.getElementById("result_txt").innerHTML=arg.fileData;
-                }
-                var result=arg.fileData;
-                if(result=="trash"){
-                    document.getElementById("result_detail").innerHTML="- Drain using a standard plastic garbage bag<br/><br/>- Please discharge domestic industrial waste separately<br/><br/>- Attach stickers and discharge large waste after reporting";
-                }
-                else if(result=="glass"){
-                    document.getElementById("result_detail").innerHTML="- Remove the cap of the bottle and drain it<br/><br/>- Remove the debris and drain it<br/><br/>- If the glass bottle is broken, throw it in a standard plastic garbage bag";
-                }
-                else if(result=="plastic"){
-                    document.getElementById("result_detail").innerHTML="- Remove any foreign substances and drain<br/><br/>- Remove any material other than the main body, such as attachment marks or accessories<br/><br/>- Separate transparent/coloured bottles<br/>";
-                }
-                else if(result=="metal"){
-                    document.getElementById("result_detail").innerHTML="- Remove the plastic lid and drain<br/><br/>- Empty contents, rinse with water and drain<br/><br/>- Squeeze the product and drain it";
-                }
-                else if(result=="paper"){
-                    document.getElementById("result_detail").innerHTML="- Be careful not to get wet<br/><br/>- Remove any other parts of the material and drain<br/><br/>- Remove the tape from the delivery box and drain it";
-                }
-            }
-
-            document.getElementById('resultBtn').onclick = function () {
-                document.getElementById("defaultImg").style.display = "none";
-                document.getElementById("result_container").style.display = "block";
-
-                bridge.onservicecallback = readImgcallback;
-                bridge.call(readImgurl, readImgparams);
-
-                bridge2.onservicecallback = callback;
-                bridge2.call(url, params);
-            };
-
-            var readImgurl = 'luna://com.domain2.app.service/readImgFile';
-            var readImgparams = '{"path":"test.jpg"}';
-
-            function readImgcallback(msg) {
-                var arg = JSON.parse(msg);
-                if (arg.returnValue) {
-                    document.getElementById("inputImg").src="data:image/png;base64,"+arg.fileData;
-                }
-            }
 
         }
     </script>
@@ -102,15 +53,14 @@
                     <span class="text-1000 fs-1 ms-2 fw-medium">Exact waste sorting</span></a>
                 </div> -->
                 <div class="dropdown">
-                    <button class="dropbtn"><img src="img/icons/recycle.jpg" alt="" width="30" /> <span
-                            class="text-1000 fs-1 ms-2 fw-medium">Exact waste sorting</span></button>
+                    <button class="dropbtn"><img src="img/icons/recycle.jpg" alt=""width="30"/> <span class="text-1000 fs-1 ms-2 fw-medium">Exact waste sorting</span></button>
                     <div class="dropdown-content">
                         <a href="trash.html">Trash</a>
                         <a href="plastic.html">Plastic</a>
                         <a href="glass.html">Glass</a>
                         <a href="metal.html">Metal</a>
                         <a href="paper.html">Paper</a>
-                        <a href="battery.html">Battery</a>
+                        <a class="active" href="battery.html">Battery</a>
                     </div>
                 </div>
             </div>
@@ -118,17 +68,23 @@
 
         <section class="pb-6" style="overflow:scroll; height:1000px">
             <div class="container">
-                <div>
-                    <button id="resultBtn" class="btn btn-lg btn-danger">Result</button>
-                </div>
-                <div id="defaultImg">
-                    <image src="img/default_img.png" width="50%" height="520px"></image>
-                </div>
-                <div id="result_container">
-                    <image id="inputImg" src="img/default_img.png" width="50%" height="520px"></image>
-                    <div id="resultDiv">
-                        <div id="result_txt"></div>
-                        <div id="result_detail"></div>
+                <div class="elementor-row">
+                    <div class="elementor-image">
+                        <img src="img/battery.png" alt="">
+                        <img src="img/battery_discharge.png" alt="">
+                    </div>
+                    <div class="elementor-text">
+                        <h2 class="elementor-text-heading">How to discharge Battery exactly?</h2>
+                        <p/>
+                        <p>Visit the waste battery collection box or community center and dispose of it.</p>
+                        <p>Remove moisture from rust and drain.</p>
+                        <p>Remove the waste batteries from the product.</p>
+                        <p>If there is no nearby collection box, collect 40 to 50 each and discharge the door in a transparent plastic bag.</p>
+                        <p>Please discharge it to the exclusive collection box such as government offices, subway stations, community centers, convenience stores, and apartment mailboxes.</p>
+                        <h4>NOTICE</h4>
+                        <p>Lithium cell mix emissions are prohibited due to fire potential during recycling operations.</p>
+                        <p>Cell phone batteries are classified as small home appliances along with mobile phones and discharged into small waste appliances collectors.</p>
+                        
                     </div>
                 </div>
             </div>

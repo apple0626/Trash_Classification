@@ -35,23 +35,6 @@
             }
 
 
-            var bridge = new WebOSServiceBridge();
-
-            var url = 'luna://com.domain.app.service/readFile';
-            var params = '{"path":"result.txt"}';
-
-            function callback(msg) {
-                var arg = JSON.parse(msg);
-                if (arg.returnValue) {
-                    var h1 = document.createElement("h1");
-                    var node = document.createTextNode(arg.fileData);
-                    h1.appendChild(node);
-                    document.getElementById("result_txt").appendChild(h1);
-                }
-            }
-
-            bridge.onservicecallback = callback;
-            bridge.call(url, params);
 
         }
     </script>
@@ -77,6 +60,7 @@
                         <a href="glass.html">Glass</a>
                         <a href="metal.html">Metal</a>
                         <a class="active" href="paper.html">Paper</a>
+                        <a href="battery.html">Battery</a>
                     </div>
                 </div>
             </div>
