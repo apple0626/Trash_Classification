@@ -10,22 +10,22 @@
             var day = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'];
             switch (date.getDay()) {
                 case 0:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 1:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste, recyclables, and food waste. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 2:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 3:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste, recyclables, and food waste. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 4:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 5:
-                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge general waste, recyclables, and food waste. (8:00 PM - 2:00 AM)';
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
                     break;
                 case 6:
                     document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is not the day to discharge waste!';
@@ -34,24 +34,6 @@
                     document.getElementById("navbarSupportedContent").innerHTML = '';
             }
 
-
-            var bridge = new WebOSServiceBridge();
-
-            var url = 'luna://com.domain.app.service/readFile';
-            var params = '{"path":"result.txt"}';
-
-            function callback(msg) {
-                var arg = JSON.parse(msg);
-                if (arg.returnValue) {
-                    var h1 = document.createElement("h1");
-                    var node = document.createTextNode(arg.fileData);
-                    h1.appendChild(node);
-                    document.getElementById("result_txt").appendChild(h1);
-                }
-            }
-
-            bridge.onservicecallback = callback;
-            bridge.call(url, params);
 
         }
     </script>
@@ -77,6 +59,7 @@
                         <a href="glass.html">Glass</a>
                         <a class="active" href="metal.html">Metal</a>
                         <a href="paper.html">Paper</a>
+                        <a href="battery.html">Battery</a>
                     </div>
                 </div>
             </div>
