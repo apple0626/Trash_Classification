@@ -38,7 +38,7 @@
             var bridge = new WebOSServiceBridge();
             var bridge2 = new WebOSServiceBridge();
 
-            var url = 'luna://com.domain2.app.service/readFile';
+            var url = 'luna://com.domain.app.service/readFile';
             var params = '{"path":"result.txt"}';
 
             function callback(msg) {
@@ -62,6 +62,9 @@
                 else if(result=="paper"){
                     document.getElementById("result_detail").innerHTML="- Be careful not to get wet<br/><br/>- Remove any other parts of the material and drain<br/><br/>- Remove the tape from the delivery box and drain it";
                 }
+                else if(result=="battery"){
+                    document.getElementById("result_detail").innerHTML="- Visit the waste battery collection box or community center and dispose of it.<br/><br/>- Remove moisture from rust and drain.<br/><br/>- Remove the waste batteries from the product.";
+                }
             }
 
             document.getElementById('resultBtn').onclick = function () {
@@ -75,7 +78,7 @@
                 bridge2.call(url, params);
             };
 
-            var readImgurl = 'luna://com.domain2.app.service/readImgFile';
+            var readImgurl = 'luna://com.domain.app.service/readImgFile';
             var readImgparams = '{"path":"test.jpg"}';
 
             function readImgcallback(msg) {
