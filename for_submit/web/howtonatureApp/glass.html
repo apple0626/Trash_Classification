@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>How to Nature</title>
+    <link href="theme.css" rel="stylesheet" />
+    <script type="text/javascript">
+        window.onload = function () {
+            var date = new Date();
+            var day = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur'];
+            switch (date.getDay()) {
+                case 0:
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
+                    break;
+                case 1:
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
+                    break;
+                case 2:
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
+                    break;
+                case 3:
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
+                    break;
+                case 4:
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste</span>. (8:00 PM - 2:00 AM)';
+                    break;
+                case 5:
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is the day to discharge &nbsp;<span style="font-style:italic;color:#000000">general waste, recyclables, and food waste</span>. (8:00 PM - 2:00 AM)';
+                    break;
+                case 6:
+                    document.getElementById("navbarSupportedContent").innerHTML = day[date.getDay()] + 'day is not the day to discharge waste!';
+                    break;
+                default:
+                    document.getElementById("navbarSupportedContent").innerHTML = '';
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/icons/logo.jpg" alt="" width="30" />
+                    <span class="text-1000 fs-1 ms-2 fw-medium">HowTo<span class="fw-bold">Nature</span></span>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+                <!-- <div><a class="navbar-brand" href="exactsorting.html"></a><img src="img/icons/recycle.jpg" alt=""width="30"/>
+                    <span class="text-1000 fs-1 ms-2 fw-medium">Exact waste sorting</span></a>
+                </div> -->
+                <div class="dropdown">
+                    <button class="dropbtn"><img src="img/icons/recycle.jpg" alt="" width="30" /> <span
+                            class="text-1000 fs-1 ms-2 fw-medium">Exact waste sorting</span></button>
+                    <div class="dropdown-content">
+                        <a href="trash.html">Trash</a>
+                        <a href="plastic.html">Plastic</a>
+                        <a class="active" href="glass.html">Glass</a>
+                        <a href="metal.html">Metal</a>
+                        <a href="paper.html">Paper</a>
+                        <a href="battery.html">Battery</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="pb-6" style="overflow:scroll; height:1000px">
+            <div class="container">
+                <div class="elementor-row">
+                    <div class="elementor-image">
+                        <img src="img/glass.png" alt="">
+                        <img src="img/glass_discharge.png" alt="">
+                    </div>
+                    <div class="elementor-text">
+                        <h2 class="elementor-text-heading">How to discharge Glass exactly?</h2>
+                        <p/>
+                        <p>Throw away soda bottles, beer bottles, and soju bottles without foreign substances <br>such as cigarette butts.</p>
+                        <p>If containers by color are installed and can be discharged by color, separate them. </p> 
+                        <p>If it is not adhesive and can be removed, remove the trademark and discharge it.</p>
+                        
+                        <h4>NOTICE</h4>
+                        <p><strong>This is not Glass!</strong></p>
+                        <div class="elementor-element elementor-element-af31fdd elementor-widget elementor-widget-text-editor"
+                            data-id="af31fdd" data-element_type="widget" data-widget_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                    <p><img loading="lazy" src="img/mirror.png" alt="" width="140" height="140">
+                                        <img loading="lazy" src="img/bulb.png" alt="" width="140" height="140">
+                                        <img loading="lazy" src="img/brokenglass.png" alt="" width="140" height="140">
+                                        <img loading="lazy" src="img/ceramic.png" alt="" width="140" height="140"></p>
+                                    <p><img loading="lazy" src="img/heatresistant.png" alt="" width="140" height="140">
+                                        <img loading="lazy" src="img/crystalglass.png" alt="" width="140" height="140">
+                                        <img loading="lazy" src="img/glasslid.png" alt="" width="140" height="140">
+                                        <img loading="lazy" src="img/toxic.png" alt="" width="140" height="140"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
