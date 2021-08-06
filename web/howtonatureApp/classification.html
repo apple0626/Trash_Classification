@@ -38,7 +38,7 @@
             var bridge = new WebOSServiceBridge();
             var bridge2 = new WebOSServiceBridge();
 
-            var url = 'luna://com.domain.app.service/readFile';
+            var url = 'luna://com.domain2.app.service/readFile';
             var params = '{"path":"result.txt"}';
 
             function callback(msg) {
@@ -78,7 +78,7 @@
                 bridge2.call(url, params);
             };
 
-            var readImgurl = 'luna://com.domain.app.service/readImgFile';
+            var readImgurl = 'luna://com.domain2.app.service/readImgFile';
             var readImgparams = '{"path":"test.jpg"}';
 
             function readImgcallback(msg) {
