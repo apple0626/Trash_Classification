@@ -1,5 +1,19 @@
-# Trash_Classification
+## LG 인도 온라인 인턴십 프로그램 프로젝트
+웹캠 기반 쓰레기 자동 분류 AI와 웹페이지 구현
 
-- Web App for WebOS
-- Trash_Classification using jupyter notebook
-- final version is for_submit dir
+## 프로젝트 구현 배경
+* 일화용품과 폐기물로 인한 환경 문제 심각
+* 자원을 보호할 수 있는 분리수거의 필요성 강조 및 올바른 분리수거 방법 안내 필요
+
+## 프로젝트 목표
+정확한 분리수거 분류 기준과 방법을 알려주는 AI와 웹페이지를 통해 사람들이 분리수거를 올바르게 할 수 있도록 도와준다.
+
+## 프로젝트 구현 내용
+* GitHub와 Kaggle의 쓰레기 데이터셋 수집(Glass, Metal, Paper, Plastic, Trash)
+* Google 웹크롤링을 통한 추가 데이터셋 확보
+* CNN Model을 활용하여 쓰레기 자동 분류 AI 구현
+* 3 layer CNN Model과 InceptionResNetV2을 이용하여 최종 분류 모델 생성
+* 쓰레기 분리배출 배너를 통한 쓰레기 분리 배출일 설명 제공
+* 쓰레기 종류에 따른 분리수거 방법 안내
+
+## 프로젝트 구현 결과
