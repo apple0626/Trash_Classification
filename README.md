@@ -17,3 +17,4 @@
 * 쓰레기 종류에 따른 분리수거 방법 안내
 
 ## 프로젝트 구현 결과
+![쓰레기](https://user-images.githubusercontent.com/39369255/173769753-2dcf8637-5898-47a7-97e7-fccbe451b17e.png)
